@@ -56,7 +56,7 @@ int main() {
 			break;
 			// Print total
 		case 3:
-			displayArray(total, SIZE);
+			displayArray(quantity, SIZE);
 			break;
 			// Exit
 		case 4:
