@@ -39,7 +39,7 @@ int main() {
 	// Initialize array price
 	int price[SIZE] = { 12, 4, 8, 1, 17, 2, 4, 2, 9, 1 };
 	// Declare array quantity and total
-	int quantity[SIZE], total[9];
+	int quantity[SIZE], total[10];
 
 	// Interactive menu
 	do {
@@ -141,7 +141,7 @@ void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[], c
 void displayArray(const int arr[], const int size) {
 	int sum = 0;
 
-	for (int i = 1; i < size; ++i) {
+	for (int i = 1; i <= size; ++i) {
 		cout << "\nValue at " << i << ": " << arr[i];
 		sum += arr[i];
 	}
