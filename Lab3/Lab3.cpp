@@ -39,7 +39,7 @@ int main() {
 	// Initialize array price
 	int price[SIZE] = { 12, 4, 8, 1, 17, 2, 4, 2, 9, 1 };
 	// Declare array quantity and total
-	int quantity[SIZE] = {0}, total[10];
+	int quantity[SIZE] = {}, total[10];
 
 	// Interactive menu
 	do {
@@ -63,7 +63,6 @@ int main() {
 			// No code needed
 			break;
 		default:
-			assert(true);
 		}
 	} while (choice != 4);
 
