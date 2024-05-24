@@ -155,6 +155,11 @@ void displayArray(const int arr[], const int size) {
  */
 int sumOddArray(const int arr[], const int size) {
 	//@TODO: You will need to complete this. Including makeing the appropriate comment header
+	int sum = 0;
+
+	for (int i = 0; i < size; i += 2) {
+
+	}
 	return 0;
 }
 
