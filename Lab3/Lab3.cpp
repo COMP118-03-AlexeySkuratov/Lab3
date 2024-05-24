@@ -48,11 +48,11 @@ int main() {
 		switch (choice) {
 			// Enter quantity
 		case 1:
-			fillInArray(quantity, 11);
+			fillInArray(quantity, SIZE);
 			break;
 			// Calculate total
 		case 2:
-			multArrays(quantity, total, price, SIZE);
+			multArrays(quantity, price, total, SIZE);
 			break;
 			// Print total
 		case 3:
@@ -121,12 +121,12 @@ void fillInArray(int arr[], const int size) {
  * @param arrSource The array containing the destination elements.
  * @param arrDest The array containing the source elements.
  * @param size The size of the arrays.
- */
+ */	
 void multArrays(const int arrQuantity[], const int arrPrice[], int arrTotal[], const int size) {
 	assert(size > 0);
 
 	for (int i = 0; i <= size; ++i) {
-		arrTotal[i] = arrQuantity[i] + arrPrice[i + 1];
+		arrTotal[i] = arrQuantity[i] * arrPrice[i + 1];
 	}
 }
 
