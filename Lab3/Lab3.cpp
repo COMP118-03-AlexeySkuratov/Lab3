@@ -62,7 +62,6 @@ int main() {
 		case 4:
 			// No code needed
 			break;
-		default:
 		}
 	} while (choice != 4);
 
