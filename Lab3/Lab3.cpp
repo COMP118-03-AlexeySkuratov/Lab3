@@ -16,6 +16,8 @@
 
 #include <iostream>
 #include <cassert>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 // Function prototypes
@@ -27,6 +29,8 @@ int sumOddArray(const int[], const int);
 bool isAllPositive(const int[], const int);
 void avgOddArray(const int[], const int, int&);
 
+//Random seed
+
 /**
  * <code>main</code> is the main function of this program.
  * <BR>
@@ -36,8 +40,14 @@ int main() {
 	int choice;
 	const int SIZE = 10;
 
+	srand(time(NULL));
+	
 	// Initialize array price
-	int price[SIZE] = { 12, 4, 8, 1, 17, 2, 4, 2, 9, 1 };
+	int price[SIZE] = {};
+	for (int i = 0; i < SIZE; i++)
+	{
+		price[i] = rand() % 10;
+	}
 	// Declare array quantity and total
 	int quantity[SIZE] = {}, total[10];
 	int average = 0;
