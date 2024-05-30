@@ -60,6 +60,9 @@ int main() {
 			break;
 			// Exit
 		case 4:
+			cout << "Sum of odd numbers in array is: " << sumOddArray(quantity, SIZE) << endl;
+			break;
+		case 5:
 			// No code needed
 			break;
 		}
@@ -83,7 +86,8 @@ int printMenu() {
 		cout << "\n1) Enter quantity";
 		cout << "\n2) Calculate total";
 		cout << "\n3) Print total";
-		cout << "\n4) Exit";
+		cout << "\n4) Sum odd numbers";
+		cout << "\n5) Exit";
 
 		cout << "\nEnter the choice: ";
 		cin >> choice;
@@ -157,10 +161,12 @@ int sumOddArray(const int arr[], const int size) {
 	//@TODO: You will need to complete this. Including makeing the appropriate comment header
 	int sum = 0;
 
-	for (int i = 0; i < size; i += 2) {
-
+	for (int i = 0; i < size; i ++) 
+	{
+		if(arr[i] % 2 != 0)
+			sum += arr[i];
 	}
-	return 0;
+	return sum;
 }
 
 /**
