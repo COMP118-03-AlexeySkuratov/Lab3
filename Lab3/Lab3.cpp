@@ -40,6 +40,7 @@ int main() {
 	int price[SIZE] = { 12, 4, 8, 1, 17, 2, 4, 2, 9, 1 };
 	// Declare array quantity and total
 	int quantity[SIZE] = {}, total[10];
+	int average = 0;
 
 	// Interactive menu
 	do {
@@ -66,10 +67,14 @@ int main() {
 			cout << "Are all elements in array positive? 0 - false. 1 - true:  result is " << isAllPositive(quantity, SIZE) << endl;
 			break;
 		case 6:
+			avgOddArray(quantity, SIZE, average);
+			cout << "The average of the all odd elements in Array is " << average << endl;
+			break;
+		case 7:
 			// No code needed
 			break;
 		}
-	} while (choice != 6);
+	} while (choice != 7);
 
 	cout << "\nHave a nice day:)" << endl;
 	return 0;
@@ -91,15 +96,16 @@ int printMenu() {
 		cout << "\n3) Print total";
 		cout << "\n4) Sum odd numbers";
 		cout << "\n5) Check if all elements are positive";
-		cout << "\n6) Exit";
+		cout << "\n6) Calculate the average of odd elements in Array";
+		cout << "\n7) Exit";
 
 		cout << "\nEnter the choice: ";
 		cin >> choice;
 
-		if (choice < 1 || choice > 6) {
+		if (choice < 1 || choice > 7) {
 			cout << "\nWrong choice, try again.";
 		}
-	} while (choice < 1 || choice > 6);
+	} while (choice < 1 || choice > 7);
 	return choice;
 }
 
@@ -199,7 +205,10 @@ bool isAllPositive(const int arr[], const int size) {
  * <BR>
  * @param ar The array containing the values
  * @param size The size of the array.
+ * @param avgOdd The average of all the odd numbers. Passed by reference.
  */
+
 void avgOddArray(const int arr[], const int size, int& avgOdd) {
 	//@TODO: You will need to complete this. Including makeing the appropriate comment header
+	avgOdd = sumOddArray(arr, size) / size;
 }
