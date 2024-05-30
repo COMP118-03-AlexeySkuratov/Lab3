@@ -63,10 +63,13 @@ int main() {
 			cout << "Sum of odd numbers in array is: " << sumOddArray(quantity, SIZE) << endl;
 			break;
 		case 5:
+			cout << "Are all elements in array positive? 0 - false. 1 - true:  result is " << isAllPositive(quantity, SIZE) << endl;
+			break;
+		case 6:
 			// No code needed
 			break;
 		}
-	} while (choice != 4);
+	} while (choice != 6);
 
 	cout << "\nHave a nice day:)" << endl;
 	return 0;
@@ -87,15 +90,16 @@ int printMenu() {
 		cout << "\n2) Calculate total";
 		cout << "\n3) Print total";
 		cout << "\n4) Sum odd numbers";
-		cout << "\n5) Exit";
+		cout << "\n5) Check if all elements are positive";
+		cout << "\n6) Exit";
 
 		cout << "\nEnter the choice: ";
 		cin >> choice;
 
-		if (choice < 1 || choice > 4) {
+		if (choice < 1 || choice > 6) {
 			cout << "\nWrong choice, try again.";
 		}
-	} while (choice < 1 || choice > 4);
+	} while (choice < 1 || choice > 6);
 	return choice;
 }
 
@@ -163,8 +167,10 @@ int sumOddArray(const int arr[], const int size) {
 
 	for (int i = 0; i < size; i ++) 
 	{
-		if(arr[i] % 2 != 0)
+		if (arr[i] % 2 != 0)
+		{
 			sum += arr[i];
+		}
 	}
 	return sum;
 }
@@ -177,7 +183,15 @@ int sumOddArray(const int arr[], const int size) {
  */
 bool isAllPositive(const int arr[], const int size) {
 	//@TODO: You will need to complete this. Including makeing the appropriate comment header
-	return 0;
+	bool isPositive = true;
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i] < 0)
+		{
+			isPositive = false;
+		}
+	}
+	return isPositive;
 }
 
 /**
