@@ -36,6 +36,9 @@ void avgOddArray(const int[], const int, int&);
  * <BR>
  * @return Returns 0 if success, any other value otherwise.
  */
+
+
+//I've completed Task 3 while doing tasks from main branch
 int main() {
 	int choice;
 	const int SIZE = 10;
